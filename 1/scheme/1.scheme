@@ -1,0 +1,4 @@
+(define (fact x)
+  (if (< x 2)
+      x
+      (* (fact (- x 1)) x)))
