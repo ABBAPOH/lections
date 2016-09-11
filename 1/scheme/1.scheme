@@ -2,3 +2,21 @@
   (if (< x 2)
       x
       (* (fact (- x 1)) x)))
+
+(fact 5)
+
+(define (fib n)
+  (cond ((= n 0) 0)
+        ((= n 1) 1)
+        (else (+ (fib (- n 1))
+                 (fib (- n 2))))))
+
+(fib 10)
+
+(define (sum-list x)
+  (let loop ((x x) (n 0))
+    (if (null? x)
+        n
+        (loop (cdr x) (+ (car x) n)))))
+
+(sum-list '(6 8 100))
