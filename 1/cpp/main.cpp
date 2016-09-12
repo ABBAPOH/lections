@@ -9,10 +9,10 @@ public:
 
     Point &operator =(const Point &other) = default;
 
-    int x() const { return _x; }
-    int y() const { return _y; }
+    inline int x() const { return _x; }
+    inline int y() const { return _y; }
 
-    int manhattanLength() const { return abs(_x) + abs(_y); }
+    inline int manhattanLength() const { return abs(_x) + abs(_y); }
 
 private:
     int _x {0};
