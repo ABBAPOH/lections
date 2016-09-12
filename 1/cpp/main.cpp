@@ -19,11 +19,23 @@ private:
     int _y {0};
 };
 
+inline Point operator +(const Point &lhs, const Point &rhs)
+{
+    return Point(lhs.x() + rhs.x(), lhs.y() + lhs.y());
+}
+
+inline Point operator -(const Point &lhs, const Point &rhs)
+{
+    return Point(lhs.x() - rhs.x(), lhs.y() - rhs.y());
+}
+
 int main(int argc, char *argv[])
 {
-    Point p(10, 20);
-    std::cout << "x = " << p.x() << std::endl;
-    std::cout << "y = " << p.y() << std::endl;
-    std::cout << "length = " << p.manhattanLength() << std::endl;
+    Point p1(10, 20);
+    Point p2(20, 30);
+    std::cout << "Point (" << p1.x() << ", " << p1.y() << ")" << std::endl;
+    std::cout << "Point (" << p2.x() << ", " << p2.y() << ")" << std::endl;
+    std::cout << "length = " << (p1 - p2).manhattanLength() << std::endl;
     return 0;
 }
+
