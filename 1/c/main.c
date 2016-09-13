@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
         FILE *file = files[i];
         if (!file) {
             printf("error opening file %s", argv[i + 1]);
+            continue;
         }
         char buffer[1024];
         size_t size = 0;
