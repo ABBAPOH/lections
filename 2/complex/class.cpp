@@ -1,4 +1,4 @@
-#include "class.hpp"
+#include "class.h"
 
 class ClassData
 {
