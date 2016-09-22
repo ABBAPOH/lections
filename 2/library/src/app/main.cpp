@@ -19,6 +19,8 @@ void plugin_hello()
     }
 
     func();
+
+    dlclose(lib);
 }
 
 int main()
