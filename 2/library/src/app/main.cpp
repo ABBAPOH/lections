@@ -26,6 +26,7 @@ void plugin_hello()
 int main()
 {
     std::cout << "main start" << std::endl;
+
     Dynamic d;
     Static s;
     d.hello();
