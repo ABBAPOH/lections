@@ -1,4 +1,6 @@
-#include "class.h"
+#include "dynamic.h"
+
+#include <iostream>
 
 class DynamicData
 {
@@ -26,4 +28,9 @@ Dynamic &Dynamic::operator=(const Dynamic &other)
 Dynamic::~Dynamic()
 {
 
+}
+
+void Dynamic::hello()
+{
+    std::cout << "Dynamic::hello" << std::endl;
 }

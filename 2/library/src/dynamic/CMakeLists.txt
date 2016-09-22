@@ -1,3 +1,3 @@
-set (SOURCES class.cpp class.h)
+set (SOURCES dynamic.cpp dynamic.h)
 
 add_library(Dynamic SHARED ${SOURCES})

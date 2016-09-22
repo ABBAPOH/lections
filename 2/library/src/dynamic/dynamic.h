@@ -1,5 +1,4 @@
-#ifndef CLASS_H
-#define CLASS_H
+#pragma once
 
 #include <memory>
 
@@ -13,8 +12,8 @@ public:
     Dynamic &operator=(const Dynamic &);
     ~Dynamic();
 
+    void hello();
+
 private:
     std::shared_ptr<DynamicData> data;
 };
-
-#endif // CLASS_H
