@@ -1,10 +1,10 @@
-#include <lib/class.h>
+#include <dynamic/class.h>
 #include <iostream>
 
 int main()
 {
     std::cout << "creating Class...";
-    Class c;
+    Dynamic d;
     std::cout << "done" << std::endl;
     return 0;
 }
