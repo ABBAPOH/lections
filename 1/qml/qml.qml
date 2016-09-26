@@ -18,4 +18,15 @@ Rectangle {
         text: "Hello World!"
         anchors.centerIn: parent
     }
+
+    MouseArea {
+        anchors.fill: parent
+        onClicked: {
+            if (Qt.colorEqual(canvas.color, "blue")) {
+                canvas.color = "red"
+            } else {
+                canvas.color = "blue"
+            }
+        }
+    }
 }
