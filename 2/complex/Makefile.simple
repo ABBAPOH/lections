@@ -1,5 +1,5 @@
 CC=clang++ # compiler
-CFLAGS=-c -Wall # compiler flags
+CFLAGS=-c -Wall -std=c++11 # compiler flags
 LDFLAGS= # linker flags
 
 all: complex
