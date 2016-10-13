@@ -1,5 +1,5 @@
 CC=clang++ # compiler
-CFLAGS=-c -Wall # compiler flags
+CFLAGS=-c -Wall -std=c++11 # compiler flags
 LDFLAGS= # linker flags
 SOURCES=src/main.cpp src/class.cpp
 OBJECTS=$(SOURCES:.cpp=.o)
@@ -18,3 +18,6 @@ clean:
 
 love:
 	echo "not war"
+
+install:
+	install $(EXECUTABLE) /usr/bin/
