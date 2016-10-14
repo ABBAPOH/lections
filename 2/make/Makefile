@@ -1,20 +1,20 @@
-CC=clang++ # compiler
-CFLAGS=-c -Wall -std=c++11 # compiler flags
+CC=clang # compiler
+CFLAGS=-Wall # compiler flags
 LDFLAGS= # linker flags
 
-all: complex
+all: app
 
-complex: main.o class.o
-	$(CC) ${LDFLAGS} main.o class.o -o complex
+app: main.o func.o
+	$(CC) ${LDFLAGS} main.o func.o -o app
 
-main.o: src/main.cpp
-	$(CC) $(CFLAGS) src/main.cpp
+main.o: src/main.c
+	$(CC) $(CFLAGS) -c src/main.c
 
-class.o: src/class.cpp
-	$(CC) $(CFLAGS) src/class.cpp
+func.o: src/func.c
+	$(CC) $(CFLAGS) -c src/func.c
 
 clean:
-	rm -rf *.o complex
+	rm -rf *.o app
 
 love:
 	echo "not war"
