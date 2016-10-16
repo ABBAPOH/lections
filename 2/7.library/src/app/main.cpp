@@ -9,7 +9,7 @@
 #  include <dlfcn.h>
 #endif
 
-void plugin_hello()
+void pluginHello()
 {
 #ifdef WIN32
     HMODULE lib = LoadLibrary("Plugin.dll");
@@ -48,7 +48,7 @@ int main()
     Static s;
     d.hello();
     s.hello();
-    plugin_hello();
+    pluginHello();
 
     std::cout << "main end" << std::endl;
 
