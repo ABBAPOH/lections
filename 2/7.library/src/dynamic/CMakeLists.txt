@@ -4,3 +4,5 @@ set (SOURCES dynamic.cpp dynamic.h dynamic_global.h)
 add_definitions("-DDYNAMIC_LIBRARY")
 
 add_library(Dynamic SHARED ${SOURCES})
+
+install(TARGETS Dynamic RUNTIME DESTINATION ${LIBRARY_DESTINATION})
