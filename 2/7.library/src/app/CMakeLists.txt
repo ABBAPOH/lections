@@ -1,6 +1,6 @@
 set (SOURCES main.cpp)
 
-add_executable(complex ${SOURCES})
+add_executable(app ${SOURCES})
 
-target_link_libraries(complex Dynamic)
-target_link_libraries(complex Static)
+target_link_libraries(app Dynamic)
+target_link_libraries(app Static)

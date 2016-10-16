@@ -1,10 +1,12 @@
 #pragma once
 
+#include "dynamic_global.h"
+
 #include <memory>
 
 class DynamicData;
 
-class Dynamic
+class DYNAMICSHARED_EXPORT Dynamic
 {
 public:
     Dynamic();

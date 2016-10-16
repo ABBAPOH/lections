@@ -1,9 +1,9 @@
 #pragma once
 
-#include <memory>
+#include "plugin_global.h"
 
 using hello_funcion = void (*)();
 
 extern "C" {
-void hello();
+void PLUIGN_SHARED_EXPORT hello();
 }
