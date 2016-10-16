@@ -5,5 +5,5 @@
 using hello_funcion = void (*)();
 
 extern "C" {
-void PLUIGN_SHARED_EXPORT hello();
+void PLUGIN_SHARED_EXPORT hello();
 }
