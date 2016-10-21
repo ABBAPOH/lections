@@ -1,18 +1,19 @@
+#include "point.h"
+
 #include <stdio.h>
 
-struct Point
+int main(void)
 {
-   int x;
-   int y;
-};
+    struct Point *p1 = alloc_point_with_xy(10, 20);
+    struct Point *p2 = alloc_point_with_xy(20, 30);
+    struct Point *p3 = sub_points(p2, p1);
 
-int main()
-{
-   struct Point p;
-   p.x = 10;
-   p.y = 20;
+    printf("Point (%d, %d)\n", p1->x, p1->y);
+    printf("Point (%d, %d)\n", p2->x, p2->y);
+    printf("length = %d\n", manhattan_length(p3));
 
-   printf("x = %d, y = %d\n", p.x, p.y);
-
-   return 0;
+    free_point(p1);
+    free_point(p2);
+    free_point(p3);
+    return 0;
 }
