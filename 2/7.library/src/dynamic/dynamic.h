@@ -5,7 +5,6 @@
 #include <memory>
 
 class DynamicData;
-template class DYNAMICSHARED_EXPORT std::shared_ptr<DynamicData>; // some windows-related magic
 
 class DYNAMICSHARED_EXPORT Dynamic
 {
