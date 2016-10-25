@@ -8,15 +8,22 @@ struct Node
     struct Node *next;
 };
 
+struct Node *createNode(const char *name, struct Node *parent)
+{
+    struct Node *result = (struct Node *)malloc(sizeof(struct Node));
+    strcpy(result->name, name);
+    result->next = 0;
+    if (parent)
+        parent->next = result;
+    return result;
+}
+
 int main()
 {
-    struct Node *second = malloc(sizeof(struct Node));
-    strcpy(second->name, "second");
-    second->next = 0;
-
-    struct Node *first = malloc(sizeof(struct Node));
-    strcpy(first->name, "first");
-    first->next = second;
+    struct Node *first = createNode("first", 0);
+    struct Node *second = createNode("second", first);
+    struct Node *third = createNode("third", second);
+    struct Node *fourth = createNode("fourth", third);
 
     struct Node *current = first;
     while (current) {
