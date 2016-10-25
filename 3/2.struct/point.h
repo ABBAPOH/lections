@@ -7,13 +7,12 @@ struct Point
     int y;
 };
 
-struct Point *alloc_point();
-struct Point *alloc_point_with_xy(int x, int y);
-void free_point(struct Point *point);
+struct Point create_point();
+struct Point create_point_with_xy(int x, int y);
 
-struct Point *add_points(struct Point *lhs, struct Point *rhs);
-struct Point *sub_points(struct Point *lhs, struct Point *rhs);
+struct Point add_points(struct Point lhs, struct Point rhs);
+struct Point sub_points(struct Point lhs, struct Point rhs);
 
-int manhattan_length(struct Point *point);
+int manhattan_length(struct Point point);
 
 #endif // POINT_H
